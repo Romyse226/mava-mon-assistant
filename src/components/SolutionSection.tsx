@@ -71,7 +71,7 @@ export default function SolutionSection() {
             </div>
 
             <img
-              src="/WhatsApp_Image_2026-02-10_at_20.39.10.jpeg"
+              src="/robot.jpeg"
               alt="MAVA Dashboard"
               className="w-40 h-40 md:w-48 md:h-48 mx-auto object-contain floating-image drop-shadow-xl"
             />
