@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto">
         <div className="mb-16 slide-up relative">
           <img
-            src="/WhatsApp_Image_2026-02-09_at_18.50.24.jpeg"
+            src="/WhatsApp_Image_2026-02-10_at_20.38.10.jpeg"
             alt="MAVA Robot"
             className="w-56 h-56 md:w-80 md:h-80 mx-auto object-contain drop-shadow-2xl"
           />
