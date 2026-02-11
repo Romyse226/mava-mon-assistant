@@ -18,26 +18,26 @@ export default function SocialProof() {
           ILS ONT ACTIVÉ MAVA
         </h2>
 
-        {/* Slider horizontal - Alignement haut */}
+        {/* Slider horizontal fluide */}
         <div className="flex gap-6 overflow-x-auto pb-12 snap-x no-scrollbar items-start">
           {screenshots.map((imgName, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2rem] p-1.5 shadow-2xl snap-center border border-white/10 flex flex-col h-auto"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2.5rem] p-3 shadow-2xl snap-center border-4 border-white/5 flex flex-col h-auto"
             >
-              {/* Étoiles plus discrètes en haut */}
-              <div className="flex items-center gap-1 my-3 justify-center">
+              {/* Étoiles centrées - On garde la déco */}
+              <div className="flex items-center gap-1 mb-4 justify-center py-2">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={14} fill="#700E03" color="#700E03" />
+                  <Star key={i} size={18} fill="#700E03" color="#700E03" />
                 ))}
               </div>
 
-              {/* Cadre ultra-fin : l'image remplit quasiment tout l'espace du card */}
-              <div className="relative w-full rounded-[1.6rem] overflow-hidden bg-white">
+              {/* Cadre dynamique : La hauteur s'adapte à l'image (h-auto) */}
+              <div className="relative w-full rounded-[1.8rem] overflow-hidden bg-gray-50 shadow-inner">
                 <img 
                   src={`/${imgName}`} 
                   alt={`Témoignage ${index + 1}`}
-                  className="w-full h-auto block object-top"
+                  className="w-full h-auto block" // h-auto pour respecter le ratio original
                   loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "https://placehold.co/400x600?text=Capture+Introuvable";
@@ -48,6 +48,7 @@ export default function SocialProof() {
           ))}
         </div>
 
+        {/* Indicateur visuel */}
         <p className="text-center text-gray-300 mt-8 text-sm font-medium tracking-widest uppercase animate-pulse">
           ⬅ Faites glisser pour voir plus de témoignages ➡
         </p>
