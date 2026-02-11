@@ -1,78 +1,265 @@
-import { CheckCircle2, Sparkles, TrendingUp, Crown } from 'lucide-react';
-import CTAButton from './CTAButton';
+import { XCircle, CheckCircle2, TrendingUp } from 'lucide-react';
 
-interface PricingCardProps {
-  title: string;
-  badge?: string;
-  description: string;
-  features: string[];
-  price: string;
-  originalPrice?: string;
-  installTime: string;
-  ctaText: string;
-  ctaMessage: string;
-  icon: 'sparkles' | 'trending' | 'crown';
-}
 
-export default function PricingCard({
-  title,
-  badge,
-  description,
-  features,
-  price,
-  originalPrice,
-  installTime,
-  ctaText,
-  ctaMessage,
-  icon
-}: PricingCardProps) {
-  const icons = {
-    sparkles: Sparkles,
-    trending: TrendingUp,
-    crown: Crown
-  };
 
-  const Icon = icons[icon];
 
-  return (
-    <div className="pricing-card bg-white rounded-3xl p-8 shadow-2xl">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <Icon size={32} color="#700E03" />
-          <h3 className="text-2xl md:text-3xl font-black text-[#700E03] uppercase">{title}</h3>
-        </div>
-      </div>
 
-      {badge && (
-        <div className="bg-[#700E03] text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-4">
-          {badge}
-        </div>
-      )}
 
-      <p className="text-[#700E03] font-semibold text-lg mb-6">{description}</p>
 
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start gap-3 text-[#700E03]">
-            <CheckCircle2 size={20} className="flex-shrink-0 mt-1" />
-            <span>{feature}</span>
-          </li>
-        ))}
-      </ul>
+export default function BenefitsSection() {
 
-      <div className="mb-6">
-        <div className="flex items-center gap-3 mb-2">
-          <span className="text-4xl font-black text-[#700E03]">{price}</span>
-          {originalPrice && (
-            <span className="text-xl text-gray-400 line-through">{originalPrice}</span>
-          )}
-        </div>
-        <p className="text-[#700E03] text-sm">
-          <span className="font-semibold">Installation (gratuite)</span> : {installTime}
-        </p>
-      </div>
 
-      <CTAButton text={ctaText} message={ctaMessage} variant="primary" />
-    </div>
-  );
+
+return (
+
+
+
+<section className="red-section px-6 py-20 max-w-4xl mx-auto">
+
+
+
+<div className="slide-up">
+
+
+
+<h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase">
+
+
+
+CE QUE TU GAGNES AVEC MAVA
+
+
+
+</h2>
+
+
+
+
+
+
+
+<div className="grid md:grid-cols-2 gap-8 my-12">
+
+
+
+<div className="bg-red-900/30 rounded-2xl p-8 border-2 border-red-800">
+
+
+
+<div className="flex items-center gap-3 mb-6">
+
+
+
+<XCircle size={32} />
+
+
+
+<h3 className="text-2xl font-bold">SANS MAVA</h3>
+
+
+
+</div>
+
+
+
+
+
+
+
+<ul className="space-y-4 text-lg">
+
+
+
+<li className="flex items-start gap-3">
+
+
+
+<span>•</span>
+
+
+
+<span>tu es esclave de ce qui devrait travailler pour toi</span>
+
+
+
+</li>
+
+
+
+<li className="flex items-start gap-3">
+
+
+
+<span>•</span>
+
+
+
+<span>tu passes plus de temps à répondre qu'à développer ton business</span>
+
+
+
+</li>
+
+
+
+<li className="flex items-start gap-3">
+
+
+
+<span>•</span>
+
+
+
+<span>tu rates des ventes comme si c'était normal</span>
+
+
+
+</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div className="bg-white/10 rounded-2xl p-8 border-2 border-white/30">
+
+
+
+<div className="flex items-center gap-3 mb-6">
+
+
+
+<CheckCircle2 size={32} />
+
+
+
+<h3 className="text-2xl font-bold">AVEC MAVA</h3>
+
+
+
+</div>
+
+
+
+
+
+
+
+<ul className="space-y-4 text-lg">
+
+
+
+<li className="flex items-start gap-3">
+
+
+
+<CheckCircle2 size={20} className="flex-shrink-0 mt-1" />
+
+
+
+<span>le tri est fait pour toi (seules les vraies ventes arrivent à toi)</span>
+
+
+
+</li>
+
+
+
+<li className="flex items-start gap-3">
+
+
+
+<CheckCircle2 size={20} className="flex-shrink-0 mt-1" />
+
+
+
+<span>ton business tourne même quand tu dors</span>
+
+
+
+</li>
+
+
+
+<li className="flex items-start gap-3">
+
+
+
+<CheckCircle2 size={20} className="flex-shrink-0 mt-1" />
+
+
+
+<span>tu vois plus clair : ce qui se vend, à quel moment, et tu grandis en travaillant moins</span>
+
+
+
+</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div className="text-center space-y-6 mt-12 bg-white rounded-2xl p-8 text-[#700E03]">
+
+
+
+<TrendingUp size={40} className="mx-auto" />
+
+
+
+<p className="font-black text-3xl uppercase">En résumé :</p>
+
+
+
+<p className="font-bold text-2xl">
+
+
+
+moins de bruit, plus d'argent, plus de contrôle.
+
+
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+);
+
+
+
 }
