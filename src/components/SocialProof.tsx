@@ -47,7 +47,7 @@ export default function SocialProof() {
         </div>
 
         <p className="text-center text-gray-300 mt-6 text-sm animate-pulse">
-          ⬅️ Faites glisser pour voir les 7 témoignages ➡️
+          ⬅ Faites glisser plus de témoignages ➡ 
         </p>
       </div>
     </section>
