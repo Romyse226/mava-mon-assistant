@@ -18,25 +18,22 @@ export default function SocialProof() {
           ILS ONT ACTIVÉ MAVA
         </h2>
 
-        {/* On utilise overflow-x-auto et on cache la scrollbar proprement */}
-        <div 
-          className="flex gap-6 overflow-x-auto pb-12 snap-x items-start"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
+        {/* Le Slider avec barre de défilement réactivée et stylisée */}
+        <div className="flex gap-6 overflow-x-auto pb-6 snap-x items-start custom-scrollbar">
           {screenshots.map((imgName, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2.5rem] p-3 shadow-2xl snap-center border-4 border-white/5 flex flex-col h-auto"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-2xl p-1.5 shadow-2xl snap-center border border-white/5 flex flex-col h-auto"
             >
-              {/* Étoiles centrées */}
-              <div className="flex items-center gap-1 mb-4 justify-center py-2">
+              {/* Étoiles discrètes */}
+              <div className="flex items-center gap-1 mb-2 justify-center py-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={18} fill="#700E03" color="#700E03" />
+                  <Star key={i} size={14} fill="#700E03" color="#700E03" />
                 ))}
               </div>
 
-              {/* Cadre dynamique pour tes captures WhatsApp */}
-              <div className="relative w-full rounded-[1.8rem] overflow-hidden bg-gray-50 shadow-inner">
+              {/* Cadre ultra-fin : p-0.5 pour que l'image respire */}
+              <div className="relative w-full rounded-xl overflow-hidden bg-gray-50 border border-gray-100">
                 <img 
                   src={`/${imgName}`} 
                   alt={`Témoignage ${index + 1}`}
@@ -56,6 +53,22 @@ export default function SocialProof() {
           ⬅ Faites glisser pour voir plus de témoignages ➡
         </p>
       </div>
+
+      {/* CSS pour styliser la barre sans faire planter le code */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .custom-scrollbar::-webkit-scrollbar {
+          height: 6px;
+          display: block;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 10px;
+        }
+      `}} />
     </section>
   );
 }
