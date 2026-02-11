@@ -1,11 +1,15 @@
 import { Star } from 'lucide-react';
 
 export default function SocialProof() {
-  const testimonials = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
+  // Liste de tes 7 images avec encodage des espaces pour que Vercel les trouve
+  const screenshots = [
+    "WhatsApp%20Image%202026-02-10%20at%2019.30.39.jpeg",
+    "WhatsApp%20Image%202026-02-10%20at%2019.30.40.jpeg",
+    "WhatsApp%20Image%202026-02-10%20at%2019.30.40%20(1).jpeg",
+    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(4).jpeg",
+    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(3).jpeg",
+    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(2).jpeg",
+    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(1).jpeg"
   ];
 
   return (
@@ -15,28 +19,38 @@ export default function SocialProof() {
           ILS ONT ACTIVÉ MAVA
         </h2>
 
-        <div className="social-proof-slider flex gap-6 overflow-x-auto pb-6">
-          {testimonials.map((testimonial) => (
+        {/* Le slider avec les 7 cadres */}
+        <div className="social-proof-slider flex gap-6 overflow-x-auto pb-8 snap-x">
+          {screenshots.map((imgName, index) => (
             <div
-              key={testimonial.id}
-              className="flex-shrink-0 w-80 h-96 bg-white rounded-2xl p-6 shadow-lg"
+              key={index}
+              className="flex-shrink-0 w-72 md:w-80 bg-white rounded-2xl p-3 shadow-2xl snap-center border-4 border-white"
             >
-              <div className="flex items-center gap-1 mb-4">
+              {/* Étoiles de satisfaction */}
+              <div className="flex items-center gap-1 mb-3 justify-center">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={20} fill="#700E03" color="#700E03" />
+                  <Star key={i} size={18} fill="#700E03" color="#700E03" />
                 ))}
               </div>
-              <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-                Capture WhatsApp
+
+              {/* Conteneur d'image adapté au format WhatsApp */}
+              <div className="relative w-full rounded-lg overflow-hidden bg-gray-100">
+                <img 
+                  src={`/${imgName}`} 
+                  alt={`Témoignage ${index + 1}`}
+                  className="w-full h-auto object-contain" 
+                  loading="lazy"
+                />
               </div>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-gray-300 mt-6 text-sm">
-          Faites glisser pour voir plus de témoignages
+        <p className="text-center text-gray-300 mt-6 text-sm animate-pulse">
+          ⬅️ Faites glisser pour voir les 7 témoignages ➡️
         </p>
       </div>
     </section>
   );
 }
+
