@@ -3,13 +3,13 @@ import { Star } from 'lucide-react';
 export default function SocialProof() {
   // Liste de tes 7 images avec encodage des espaces pour que Vercel les trouve
   const screenshots = [
-    "WhatsApp%20Image%202026-02-10%20at%2019.30.39.jpeg",
-    "WhatsApp%20Image%202026-02-10%20at%2019.30.40.jpeg",
-    "WhatsApp%20Image%202026-02-10%20at%2019.30.40%20(1).jpeg",
-    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(4).jpeg",
-    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(3).jpeg",
-    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(2).jpeg",
-    "WhatsApp%20Image%202026-02-10%20at%2019.30.39%20(1).jpeg"
+    "capture 1.jpeg",
+    "capture 2.jpeg",
+    "capture 3.jpeg",
+    "capture 4.jpeg",
+    "capture 5.jpeg",
+    "capture 6.jpeg",
+    "capture 7.jpeg"
   ];
 
   return (
