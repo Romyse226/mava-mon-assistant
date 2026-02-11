@@ -11,24 +11,27 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="text-white scroll-smooth">
+    <div className="text-white scroll-smooth bg-black">
       <Hero />
+      
+      {/* BLOC CONTEXTE : Problème + Audience */}
+      <div className="bg-[#1a1a1a]">
+        <ProblemSection />
+        <TargetAudienceSection />
+      </div>
 
-      <ProblemSection />
-
+      {/* BLOC SOLUTION : Ce que c'est + Ce que tu gagnes */}
       <SolutionSection />
-
-      <TargetAudienceSection />
-
       <BenefitsSection />
 
       <SocialProof />
 
+      {/* BLOC OFFRE : Prix + Garantie + Urgence */}
       <PricingSection />
-
-      <GuaranteeSection />
-
-      <FinalSections />
+      <div className="bg-[#700E03]">
+         <GuaranteeSection />
+         <FinalSections />
+      </div>
 
       <Footer />
     </div>
