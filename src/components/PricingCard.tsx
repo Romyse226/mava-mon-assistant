@@ -1,265 +1,71 @@
-import { XCircle, CheckCircle2, TrendingUp } from 'lucide-react';
-
-
-
-
-
-
-
-export default function BenefitsSection() {
-
-
-
-return (
-
-
-
-<section className="red-section px-6 py-20 max-w-4xl mx-auto">
-
-
-
-<div className="slide-up">
-
-
-
-<h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase">
-
-
-
-CE QUE TU GAGNES AVEC MAVA
-
-
-
-</h2>
-
-
-
-
-
-
-
-<div className="grid md:grid-cols-2 gap-8 my-12">
-
-
-
-<div className="bg-red-900/30 rounded-2xl p-8 border-2 border-red-800">
-
-
-
-<div className="flex items-center gap-3 mb-6">
-
-
-
-<XCircle size={32} />
-
-
-
-<h3 className="text-2xl font-bold">SANS MAVA</h3>
-
-
-
-</div>
-
-
-
-
-
-
-
-<ul className="space-y-4 text-lg">
-
-
-
-<li className="flex items-start gap-3">
-
-
-
-<span>•</span>
-
-
-
-<span>tu es esclave de ce qui devrait travailler pour toi</span>
-
-
-
-</li>
-
-
-
-<li className="flex items-start gap-3">
-
-
-
-<span>•</span>
-
-
-
-<span>tu passes plus de temps à répondre qu'à développer ton business</span>
-
-
-
-</li>
-
-
-
-<li className="flex items-start gap-3">
-
-
-
-<span>•</span>
-
-
-
-<span>tu rates des ventes comme si c'était normal</span>
-
-
-
-</li>
-
-
-
-</ul>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div className="bg-white/10 rounded-2xl p-8 border-2 border-white/30">
-
-
-
-<div className="flex items-center gap-3 mb-6">
-
-
-
-<CheckCircle2 size={32} />
-
-
-
-<h3 className="text-2xl font-bold">AVEC MAVA</h3>
-
-
-
-</div>
-
-
-
-
-
-
-
-<ul className="space-y-4 text-lg">
-
-
-
-<li className="flex items-start gap-3">
-
-
-
-<CheckCircle2 size={20} className="flex-shrink-0 mt-1" />
-
-
-
-<span>le tri est fait pour toi (seules les vraies ventes arrivent à toi)</span>
-
-
-
-</li>
-
-
-
-<li className="flex items-start gap-3">
-
-
-
-<CheckCircle2 size={20} className="flex-shrink-0 mt-1" />
-
-
-
-<span>ton business tourne même quand tu dors</span>
-
-
-
-</li>
-
-
-
-<li className="flex items-start gap-3">
-
-
-
-<CheckCircle2 size={20} className="flex-shrink-0 mt-1" />
-
-
-
-<span>tu vois plus clair : ce qui se vend, à quel moment, et tu grandis en travaillant moins</span>
-
-
-
-</li>
-
-
-
-</ul>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div className="text-center space-y-6 mt-12 bg-white rounded-2xl p-8 text-[#700E03]">
-
-
-
-<TrendingUp size={40} className="mx-auto" />
-
-
-
-<p className="font-black text-3xl uppercase">En résumé :</p>
-
-
-
-<p className="font-bold text-2xl">
-
-
-
-moins de bruit, plus d'argent, plus de contrôle.
-
-
-
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-);
-
-
-
+import PricingCard from './PricingCard';
+
+export default function PricingSection() {
+  return (
+    <section className="red-section px-6 py-20 max-w-7xl mx-auto">
+      <div className="slide-up">
+        <h2 className="text-3xl md:text-5xl font-black mb-16 text-center uppercase">
+          CHOISIS TON MAVA
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <PricingCard
+            title="MAVA CHAT"
+            badge="LE PLUS CHOISI"
+            description="Pour respirer et ne plus rater de vente."
+            features={[
+              'Réponses 24h/7j',
+              'Prises de commandes',
+              'Alertes dès qu\'une vente est prête',
+              'Fonctionne naturellement avec ton téléphone actif, tel que tu l\'utilises déjà',
+              'Bonus : un tableau de bord simple pour suivre tes ventes'
+            ]}
+            price="29.000 F / mois"
+            originalPrice="45.000 F"
+            installTime="24–48h"
+            ctaText="Activer MAVA CHAT"
+            ctaMessage="Bonjour, je veux activer MAVA CHAT pour automatiser mon WhatsApp et ne plus rater de ventes."
+            icon="sparkles"
+          />
+
+          <PricingCard
+            title="MAVA VISION"
+            badge="LE PLUS UTILISÉ PAR LES E-COMMERÇANTS TIKTOK"
+            description="Pour les business qui vendent via lives TikTok/Facebook avec photos, ou captures d'écran de produits"
+            features={[
+              'Tout MAVA CHAT +',
+              'Traitement intelligent des images',
+              'Reconnaissance des produits et preuves de paiement',
+              'Ajout et mise à jour des produits',
+              'Fonctionne naturellement avec ton téléphone actif, tel que tu l\'utilises déjà'
+            ]}
+            price="35.000 F / mois"
+            originalPrice="50.000 F"
+            installTime="48–72h"
+            ctaText="Activer MAVA VISION"
+            ctaMessage="Bonjour, je veux activer MAVA VISION pour gérer mes ventes via photos, lives et captures d'écran."
+            icon="trending"
+          />
+
+          <PricingCard
+            title="MAVA PRO"
+            badge="SUR SÉLECTION"
+            description="Pour structures établies."
+            features={[
+              'Configuration sur mesure',
+              'Multi-numéros / multi-canaux (sites web, réseaux sociaux, App)',
+              'Automatisations avancées',
+              'Support prioritaire',
+              'Entièrement autonome, même avec ton téléphone Totalement hors circuit'
+            ]}
+            price="Sur devis"
+            installTime="à partir de 125.000 F Installation + 59.000 F/mois"
+            ctaText="Demander une évaluation"
+            ctaMessage="Bonjour, je souhaite une évaluation pour MAVA PRO. Mon business a déjà du volume."
+            icon="crown"
+          />
+        </div>
+      </div>
+    </section>
+  );
 }
