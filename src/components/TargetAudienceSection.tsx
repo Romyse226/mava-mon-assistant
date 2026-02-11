@@ -37,7 +37,7 @@ export default function TargetAudienceSection() {
           <div className="bg-black/60 rounded-2xl p-6 border border-white/10 text-white">
             <div className="flex items-center gap-3 mb-4 text-green-500">
               <CheckCircle2 size={24} />
-              <h3 className="text-xl font-bold uppercase italic">MAVA est pour les business qui :</h3>
+              <h3 className="text-xl font-bold uppercase italic text-white">MAVA est pour les business qui :</h3>
             </div>
             <ul className="space-y-2 ml-4 text-base text-gray-200">
               <li>• vendent déjà,</li>
@@ -50,15 +50,20 @@ export default function TargetAudienceSection() {
           </div>
         </div>
 
-        {/* Dernier bloc Conclusion - Ultra compact et horizontal */}
+        {/* Dernier bloc Conclusion - Phrase d'origine complète */}
         <div className="mt-6 bg-white rounded-2xl p-4 md:p-5 text-[#700E03] flex items-center justify-center gap-4 max-w-3xl mx-auto shadow-xl">
           <CheckCircle2 size={28} className="flex-shrink-0 text-green-600" />
           <div className="text-left">
-            <p className="font-bold text-sm md:text-base leading-tight">Si ton business s'arrête quand ton WhatsApp s'arrête, et que répondre te bloque plus que ça ne te fasse grandir,</p>
-            <p className="font-black text-lg md:text-xl uppercase tracking-tight">MAVA est fait pour toi.</p>
+            <p className="font-bold text-sm md:text-base leading-tight italic">
+              Si ton business s'arrête quand ton WhatsApp s'arrête, et que répondre à tes clients te bloque plus que cela ne te fait grandir,
+            </p>
+            <p className="font-black text-lg md:text-xl uppercase tracking-tight mt-1">
+              MAVA est fait pour toi.
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
