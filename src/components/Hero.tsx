@@ -1,67 +1,60 @@
-import { Star } from 'lucide-react';
+import CTAButton from './CTAButton';
 
-export default function SocialProof() {
-  const screenshots = [
-    "capture 1.jpeg",
-    "capture 2.jpeg",
-    "capture 3.jpeg",
-    "capture 4.jpeg",
-    "capture 5.jpeg",
-    "capture 6.jpeg",
-    "capture 7.jpeg"
-  ];
-
+export default function Hero() {
   return (
-    <section className="dark-section px-4 py-24 w-full overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-black mb-16 text-center uppercase tracking-tighter">
-          ILS ONT ACTIVÉ MAVA
-        </h2>
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center fade-in relative overflow-hidden">
+      <div className="absolute top-6 right-6 z-10">
+        <img
+          src="/WhatsApp_Image_2026-02-09_at_18.50.24.jpeg"
+          alt="MAVA Logo"
+          className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-lg"
+        />
+      </div>
 
-        {/* Slider horizontal - Alignement haut */}
-        <div className="flex gap-6 overflow-x-auto pb-12 snap-x no-scrollbar items-start">
-          {screenshots.map((imgName, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2rem] p-1.5 shadow-2xl snap-center border border-white/10 flex flex-col h-auto"
-            >
-              {/* Étoiles plus discrètes en haut */}
-              <div className="flex items-center gap-1 my-3 justify-center">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={14} fill="#700E03" color="#700E03" />
-                ))}
-              </div>
-
-              {/* Cadre ultra-fin : l'image remplit quasiment tout l'espace du card */}
-              <div className="relative w-full rounded-[1.6rem] overflow-hidden bg-white">
-                <img 
-                  src={`/${imgName}`} 
-                  alt={`Témoignage ${index + 1}`}
-                  className="w-full h-auto block object-top"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://placehold.co/400x600?text=Capture+Introuvable";
-                  }}
-                />
-              </div>
-            </div>
-          ))}
+      <div className="max-w-4xl mx-auto">
+        <div className="mb-16 slide-up relative">
+          <img
+            src="/gomo.jpeg"
+            alt="MAVA Robot"
+            className="w-56 h-56 md:w-80 md:h-80 mx-auto object-contain drop-shadow-2xl"
+          />
         </div>
 
-        <p className="text-center text-gray-300 mt-8 text-sm font-medium tracking-widest uppercase animate-pulse">
-          ⬅ Faites glisser pour voir plus de témoignages ➡
-        </p>
+        <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight slide-up uppercase">
+          TON BUSINESS DOIT JUSTE T'ENRICHIR.
+        </h1>
+
+        <h2 className="text-3xl md:text-5xl font-bold mb-12 leading-tight slide-up uppercase">
+          PAS T'ENCHAÎNER À TON WHATSAPP.
+        </h2>
+
+        <div className="mb-12 space-y-6 text-lg md:text-xl leading-relaxed slide-up">
+          <p className="font-semibold text-xl md:text-2xl">
+            MAVA EST TON ASSISTANT COMMERCIAL.
+          </p>
+          <p className="text-gray-200">
+            Il répond, prend les commandes
+            <br />
+            et t'alerte seulement quand l'argent est prêt à être encaissé.
+          </p>
+        </div>
+
+        <div className="mb-12 space-y-4 text-lg md:text-xl font-medium slide-up">
+          <p>24h/24.</p>
+          <p>Sans fatigue.</p>
+          <p>Sans stress.</p>
+          <p>Sans que tu interviennes.</p>
+          <p className="text-gray-200">Et tu peux prendre la main quand tu veux.</p>
+        </div>
+
+        <div className="slide-up">
+          <CTAButton
+            text="Obtenir MAVA Maintenant"
+            message="Bonjour, je veux activer MAVA pour mon business. Quel pack me conseillez-vous selon mon activité ?"
+            variant="light"
+          />
+        </div>
       </div>
-      
-      <style jsx>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
   );
 }
