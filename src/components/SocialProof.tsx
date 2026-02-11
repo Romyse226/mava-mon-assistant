@@ -18,29 +18,29 @@ export default function SocialProof() {
           ILS ONT ACTIVÉ MAVA
         </h2>
 
-        {/* Le slider horizontal sans barre de défilement moche */}
-        <div className="flex gap-6 overflow-x-auto pb-12 snap-x no-scrollbar">
+        {/* Slider horizontal fluide */}
+        <div className="flex gap-6 overflow-x-auto pb-12 snap-x no-scrollbar items-start">
           {screenshots.map((imgName, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2.5rem] p-3 shadow-2xl snap-center border-4 border-white/5"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2.5rem] p-3 shadow-2xl snap-center border-4 border-white/5 flex flex-col h-auto"
             >
-              {/* Étoiles centrées */}
+              {/* Étoiles centrées - On garde la déco */}
               <div className="flex items-center gap-1 mb-4 justify-center py-2">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={20} fill="#700E03" color="#700E03" />
+                  <Star key={i} size={18} fill="#700E03" color="#700E03" />
                 ))}
               </div>
 
-              {/* Cadre de l'image ajusté pour une visibilité totale */}
-              <div className="relative w-full h-[500px] md:h-[580px] rounded-[1.8rem] overflow-hidden bg-black shadow-inner">
+              {/* Cadre dynamique : La hauteur s'adapte à l'image (h-auto) */}
+              <div className="relative w-full rounded-[1.8rem] overflow-hidden bg-gray-50 shadow-inner">
                 <img 
-                  src={`/${imgName}`} // Assure-toi de mettre les images à la racine du dossier "public"
+                  src={`/${imgName}`} 
                   alt={`Témoignage ${index + 1}`}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-auto block" // h-auto pour respecter le ratio original
                   loading="lazy"
                   onError={(e) => {
-                    e.currentTarget.src = "https://placehold.co/400x800?text=Capture+Introuvable";
+                    e.currentTarget.src = "https://placehold.co/400x600?text=Capture+Introuvable";
                   }}
                 />
               </div>
@@ -48,13 +48,12 @@ export default function SocialProof() {
           ))}
         </div>
 
-        {/* Ton texte original qui bouge (animate-pulse) */}
+        {/* Indicateur visuel */}
         <p className="text-center text-gray-300 mt-8 text-sm font-medium tracking-widest uppercase animate-pulse">
           ⬅ Faites glisser pour voir plus de témoignages ➡
         </p>
       </div>
       
-      {/* Style CSS pour cacher la scrollbar tout en gardant le défilement */}
       <style jsx>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;
@@ -67,4 +66,3 @@ export default function SocialProof() {
     </section>
   );
 }
-
