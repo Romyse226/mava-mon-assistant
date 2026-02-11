@@ -46,13 +46,14 @@ export default function TargetAudienceSection() {
           </div>
         </div>
 
-        <div className="mt-6 bg-white rounded-2xl p-4 md:p-5 text-[#700E03] flex items-center justify-center gap-4 max-w-3xl mx-auto shadow-xl">
-          <CheckCircle2 size={28} className="flex-shrink-0 text-green-600" />
-          <div className="text-left">
-            <p className="font-bold text-sm md:text-base leading-tight italic">
+        {/* CADRE BLANC AGRANDI ET SÉCURISÉ */}
+        <div className="mt-8 bg-white rounded-2xl p-6 md:p-8 text-[#700E03] flex flex-col md:flex-row items-center justify-center gap-4 max-w-4xl mx-auto shadow-2xl min-h-[140px]">
+          <CheckCircle2 size={36} className="flex-shrink-0 text-green-600" />
+          <div className="text-center md:text-left w-full">
+            <p className="font-bold text-base md:text-lg leading-relaxed italic mb-2">
               Si ton business s'arrête quand ton WhatsApp s'arrête, et que répondre à tes clients te bloque plus que cela ne te fait grandir,
             </p>
-            <p className="font-black text-lg md:text-xl uppercase tracking-tight mt-1">
+            <p className="font-black text-xl md:text-2xl uppercase tracking-tight">
               MAVA est fait pour toi.
             </p>
           </div>
