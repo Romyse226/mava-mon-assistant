@@ -4,12 +4,10 @@ export default function TargetAudienceSection() {
   return (
     <section className="bg-red-950/40 p-4 md:p-8 rounded-3xl border border-red-900/50 max-w-5xl mx-auto">
       <div className="slide-up">
-        {/* Titre avec cassure forcée mobile */}
         <h2 className="text-3xl md:text-5xl font-black mb-6 text-center uppercase tracking-tighter leading-tight text-white">
           À QUI MAVA <br className="md:hidden" /> EST DESTINÉ ?
         </h2>
 
-        {/* Sous-titre : Rouge avec Brillance (Shadow Glow) */}
         <div className="space-y-1 text-center mb-8">
           <p className="text-base text-red-500 font-bold uppercase italic drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
             Soyons clairs.
@@ -20,7 +18,6 @@ export default function TargetAudienceSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 items-stretch">
-          {/* Bloc PAS POUR - Fond Noir, Bordure fine */}
           <div className="bg-black/60 rounded-2xl p-6 border border-white/10 text-white">
             <div className="flex items-center gap-3 mb-4 text-red-600">
               <XCircle size={24} />
@@ -33,7 +30,6 @@ export default function TargetAudienceSection() {
             </ul>
           </div>
 
-          {/* Bloc POUR - Fond Noir, Bordure fine */}
           <div className="bg-black/60 rounded-2xl p-6 border border-white/10 text-white">
             <div className="flex items-center gap-3 mb-4 text-green-500">
               <CheckCircle2 size={24} />
@@ -50,7 +46,6 @@ export default function TargetAudienceSection() {
           </div>
         </div>
 
-        {/* Dernier bloc Conclusion - Phrase d'origine complète jusqu'à grandir */}
         <div className="mt-6 bg-white rounded-2xl p-4 md:p-5 text-[#700E03] flex items-center justify-center gap-4 max-w-3xl mx-auto shadow-xl">
           <CheckCircle2 size={28} className="flex-shrink-0 text-green-600" />
           <div className="text-left">
@@ -66,3 +61,4 @@ export default function TargetAudienceSection() {
     </section>
   );
 }
+
