@@ -2,7 +2,7 @@ import { XCircle, CheckCircle2, TrendingUp } from 'lucide-react';
 
 export default function BenefitsSection() {
   return (
-    <section className="red-section px-6 py-20 max-w-4xl mx-auto">
+    <section className="bg-red-950/20 p-6 rounded-3xl border border-red-900/50">
       <div className="slide-up">
         <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase">
           CE QUE TU GAGNES AVEC MAVA
