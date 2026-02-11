@@ -19,27 +19,28 @@ export default function SocialProof() {
         </h2>
 
         {/* Le slider horizontal sans barre de défilement moche */}
-        <div className="flex gap-8 overflow-x-auto pb-12 snap-x no-scrollbar">
+        <div className="flex gap-6 overflow-x-auto pb-12 snap-x no-scrollbar">
           {screenshots.map((imgName, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2rem] p-4 shadow-2xl snap-center border-4 border-white/10"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2.5rem] p-3 shadow-2xl snap-center border-4 border-white/5"
             >
               {/* Étoiles centrées */}
-              <div className="flex items-center gap-1 mb-5 justify-center">
+              <div className="flex items-center gap-1 mb-4 justify-center py-2">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={22} fill="#700E03" color="#700E03" />
+                  <Star key={i} size={20} fill="#700E03" color="#700E03" />
                 ))}
               </div>
 
-              {/* Cadre de l'image (Format Smartphone WhatsApp) */}
-              <div className="relative w-full h-[450px] md:h-[550px] rounded-2xl overflow-hidden bg-gray-50 shadow-inner">
+              {/* Cadre de l'image ajusté pour une visibilité totale */}
+              <div className="relative w-full h-[500px] md:h-[580px] rounded-[1.8rem] overflow-hidden bg-black shadow-inner">
                 <img 
-                  src={`/${imgName}`} 
+                  src={`/${imgName}`} // Assure-toi de mettre les images à la racine du dossier "public"
                   alt={`Témoignage ${index + 1}`}
-                  className="w-full h-full object-contain bg-gray-50"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
                   onError={(e) => {
-                    e.currentTarget.src = "https://placehold.co";
+                    e.currentTarget.src = "https://placehold.co/400x800?text=Capture+Introuvable";
                   }}
                 />
               </div>
@@ -52,6 +53,17 @@ export default function SocialProof() {
           ⬅ Faites glisser pour voir plus de témoignages ➡
         </p>
       </div>
+      
+      {/* Style CSS pour cacher la scrollbar tout en gardant le défilement */}
+      <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 }
