@@ -54,7 +54,7 @@ export default function TargetAudienceSection() {
         <div className="mt-6 bg-white rounded-2xl p-4 md:p-5 text-[#700E03] flex items-center justify-center gap-4 max-w-3xl mx-auto shadow-xl">
           <CheckCircle2 size={28} className="flex-shrink-0 text-green-600" />
           <div className="text-left">
-            <p className="font-bold text-sm md:text-base leading-tight">Si ton business s'arrête quand ton WhatsApp s'arrête, et que répondre te bloque...</p>
+            <p className="font-bold text-sm md:text-base leading-tight">Si ton business s'arrête quand ton WhatsApp s'arrête, et que répondre te bloque plus que ça ne te fasse grandir,</p>
             <p className="font-black text-lg md:text-xl uppercase tracking-tight">MAVA est fait pour toi.</p>
           </div>
         </div>
