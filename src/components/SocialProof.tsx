@@ -1,7 +1,6 @@
 import { Star } from 'lucide-react';
 
 export default function SocialProof() {
-  // Liste de tes 7 images avec encodage des espaces pour que Vercel les trouve
   const screenshots = [
     "capture 1.jpeg",
     "capture 2.jpeg",
@@ -13,41 +12,44 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="dark-section px-6 py-20 max-w-6xl mx-auto">
-      <div className="slide-up">
-        <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase">
+    <section className="dark-section px-4 py-24 w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl md:text-6xl font-black mb-16 text-center uppercase tracking-tighter">
           ILS ONT ACTIVÉ MAVA
         </h2>
 
-        {/* Le slider avec les 7 cadres */}
-        <div className="social-proof-slider flex gap-6 overflow-x-auto pb-8 snap-x">
+        {/* Le slider horizontal sans barre de défilement moche */}
+        <div className="flex gap-8 overflow-x-auto pb-12 snap-x no-scrollbar">
           {screenshots.map((imgName, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-72 md:w-80 bg-white rounded-2xl p-3 shadow-2xl snap-center border-4 border-white"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-[2rem] p-4 shadow-2xl snap-center border-4 border-white/10"
             >
-              {/* Étoiles de satisfaction */}
-              <div className="flex items-center gap-1 mb-3 justify-center">
+              {/* Étoiles centrées */}
+              <div className="flex items-center gap-1 mb-5 justify-center">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={18} fill="#700E03" color="#700E03" />
+                  <Star key={i} size={22} fill="#700E03" color="#700E03" />
                 ))}
               </div>
 
-              {/* Conteneur d'image adapté au format WhatsApp */}
-              <div className="relative w-full rounded-lg overflow-hidden bg-gray-100">
+              {/* Cadre de l'image (Format Smartphone WhatsApp) */}
+              <div className="relative w-full h-[450px] md:h-[550px] rounded-2xl overflow-hidden bg-gray-50 shadow-inner">
                 <img 
                   src={`/${imgName}`} 
                   alt={`Témoignage ${index + 1}`}
-                  className="w-full h-auto object-contain" 
-                  loading="lazy"
+                  className="w-full h-full object-contain bg-gray-50"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://placehold.co";
+                  }}
                 />
               </div>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-gray-300 mt-6 text-sm animate-pulse">
-          ⬅ Faites glisser pour voir plus de témoignages ➡ 
+        {/* Ton texte original qui bouge (animate-pulse) */}
+        <p className="text-center text-gray-300 mt-8 text-sm font-medium tracking-widest uppercase animate-pulse">
+          ⬅ Faites glisser pour voir plus de témoignages ➡
         </p>
       </div>
     </section>
