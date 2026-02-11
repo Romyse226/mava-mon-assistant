@@ -50,7 +50,7 @@ export default function TargetAudienceSection() {
           </div>
         </div>
 
-        {/* Dernier bloc Conclusion - Phrase d'origine complète */}
+        {/* Dernier bloc Conclusion - Phrase d'origine complète jusqu'à grandir */}
         <div className="mt-6 bg-white rounded-2xl p-4 md:p-5 text-[#700E03] flex items-center justify-center gap-4 max-w-3xl mx-auto shadow-xl">
           <CheckCircle2 size={28} className="flex-shrink-0 text-green-600" />
           <div className="text-left">
@@ -66,4 +66,3 @@ export default function TargetAudienceSection() {
     </section>
   );
 }
-
