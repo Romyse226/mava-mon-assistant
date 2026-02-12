@@ -55,16 +55,18 @@ export default function SolutionSection() {
               <p className="font-semibold text-base md:text-lg">Il gère juste le courant. Tu gères l'important.</p>
             </div>
           </div>
-
+                   {/* Section exemple de message compressée */}
           <div className="relative bg-white/5 rounded-2xl p-4 border border-white/10 text-center h-[240px] md:h-[280px] overflow-visible">
             <p className="mb-3 text-sm text-gray-300 italic">Quand une situation le dépasse, il te notifie. Ex :</p>
             
+            {/* z-10 pour la boîte noire */}
             <div className="bg-black border border-white/30 rounded-xl p-4 italic text-sm text-white mb-4 shadow-lg inline-block w-full relative z-10">
               <Bell className="inline mr-2 text-red-500 animate-pulse" size={16} />
               "Boss, y'a le client 07XXXXXXX qui est mécontent pour son colis endommagé..."
             </div>
 
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-full">
+            {/* z-20 pour l'image afin qu'elle passe DEVANT la boîte noire */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-full z-20">
                <img
                 src="/image.jpeg"
                 alt="MAVA Dashboard"
