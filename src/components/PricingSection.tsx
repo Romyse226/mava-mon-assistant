@@ -16,53 +16,51 @@ export default function PricingSection() {
             features={[
               'Réponses 24h/7j',
               'Prises de commandes',
-              'Alertes vente validée',
-              'Garde ton téléphone actuel',
-              'Tableau de bord inclus'
+              'Alertes dès qu’une vente est prête',
+              'Mise à jour des infos',
+              'Fonctionne naturellement avec ton téléphone actif, comme aujourd’hui'
             ]}
+            bonus="Bonus : Dashboard simple pour suivre tes ventes"
             price="29.000 F / mois"
             originalPrice="45.000 F"
             installTime="24–48h"
             ctaText="Activer MAVA CHAT"
             ctaMessage="Bonjour, je veux activer MAVA CHAT."
-            icon="sparkles"
           />
 
           <PricingCard
             title="MAVA VISION"
-            badge="SPECIAL TIKTOK"
-            description="Pour les business qui vendent via photos et lives."
+            badge="PRÉFÉRÉ PAR LES VENDEURS TIKTOK"
+            description="Pour les business qui vendent via lives TikTok/Facebook avec captures d’écran ou photos des produits"
             features={[
               'Tout MAVA CHAT +',
-              'Lecture intelligente d\'images',
-              'Preuves de paiement auto',
-              'Mise à jour des stocks',
-              'Garde ton téléphone actuel'
+              'Traitement intelligent des images',
+              'Reconnaissance des produits et preuves de paiement',
+              'Ajout et mise à jour des produits',
+              'Fonctionne naturellement avec ton téléphone actif, comme aujourd’hui'
             ]}
             price="35.000 F / mois"
             originalPrice="50.000 F"
             installTime="48–72h"
             ctaText="Activer MAVA VISION"
             ctaMessage="Bonjour, je veux activer MAVA VISION."
-            icon="trending"
           />
 
           <PricingCard
             title="MAVA PRO"
             badge="SUR SÉLECTION"
-            description="Pour structures établies."
+            description="Pour structures prêtes à devenir des systèmes."
             features={[
               'Configuration sur mesure',
-              'Multi-numéros / multi-canaux',
+              'Multi-numéros / multi-canaux (sites web, réseaux sociaux, App)',
               'Automatisations avancées',
               'Support prioritaire',
-              'Totalement autonome (Cloud)'
+              'Entièrement autonome, même avec un smartphone hors circuit'
             ]}
             price="Sur devis"
             installTime="Dès 125.000 F Inst. + 59.000 F/m"
             ctaText="Demander évaluation"
             ctaMessage="Bonjour, je souhaite une évaluation MAVA PRO."
-            icon="crown"
           />
         </div>
       </div>

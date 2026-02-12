@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircle2, Clock, Gift } from 'lucide-react';
 import CTAButton from './CTAButton';
 
@@ -13,20 +12,19 @@ export default function PricingCard({
         </div>
       )}
       
-      <h3 className="text-xl font-black mb-2 text-gray-900 mt-4">{title}</h3>
-      <p className="text-gray-900 text-xs mb-6 italic">{description}</p>
+      <h3 className="text-xl font-black mb-2 text-black mt-4">{title}</h3>
+      <p className="text-black text-xs mb-6 italic">{description}</p>
 
       <ul className="space-y-3 mb-6 flex-grow">
         {features.map((feature: string, i: number) => (
           <li key={i} className="flex items-start gap-2 text-sm text-black">
             <CheckCircle2 size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
-            <span>{feature}</span>
+            <span className="font-medium">{feature}</span>
           </li>
         ))}
         
-        {/* Affichage du Bonus avec l'icône Cadeau si présent */}
         {bonus && (
-          <li className="flex items-start gap-2 text-sm font-bold text-black mt-4 p-2 bg-gray-50 rounded-lg border border-dashed border-gray-200">
+          <li className="flex items-start gap-2 text-sm font-bold text-black mt-4 p-2 bg-gray-50 rounded-lg border border-dashed border-gray-300">
             <Gift size={18} className="text-red-600 flex-shrink-0" />
             <span>{bonus}</span>
           </li>
@@ -36,12 +34,17 @@ export default function PricingCard({
       <div className="mt-auto pt-6 border-t border-gray-100">
         <div className="mb-4">
           {originalPrice && (
-            <span className="text-gray-400 line-through text-xs block">{originalPrice}</span>
+            /* Prix barré passé en NOIR avec opacité pour rester lisible */
+            <span className="text-black line-through text-xs block mb-1 font-bold">{originalPrice}</span>
           )}
-          <span className="text-2xl font-black text-gray-900">{price}</span>
+          <span className="text-2xl font-black text-black">{price}</span>
         </div>
         
-        <p className="text-[10px] text-gray-400 mb-4 italic">Installation : {installTime}</p>
+        {/* Texte d'installation passé en NOIR */}
+        <div className="flex items-center gap-1.5 text-[10px] text-black mb-4 italic font-semibold">
+          <Clock size={12} />
+          <span>Installation : {installTime}</span>
+        </div>
 
         <CTAButton text={ctaText} message={ctaMessage} variant="primary" />
       </div>

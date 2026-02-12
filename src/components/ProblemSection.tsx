@@ -12,7 +12,7 @@ export default function ProblemSection() {
           {/* Bloc WhatsApp compressé (space-y-1) */}
           <div className="space-y-1">
             <p className="font-semibold text-red-600 uppercase italic">Tout se passe sur WhatsApp :</p>
-            <p>Répondre. Expliquer. Noter les commandes. Ou même Encaisser.</p>
+            <p>Répondre. Expliquer. Noter les commandes... Même Encaisser.</p>
           </div>
 
           <div className="my-8">
