@@ -28,7 +28,7 @@ export default function FinalSections() {
         </div>
       </section>
 
-      {/* Section 2 : DERNIER POINT (Même Design) */}
+      {/* Section 2 : DERNIER POINT */}
       <section className="px-4 py-6 max-w-4xl mx-auto">
         <div className="slide-up bg-red-950/20 rounded-3xl p-6 md:p-8 border border-red-900/50 shadow-xl">
           <div className="flex items-center justify-center gap-4 mb-6 text-red-600">
@@ -40,10 +40,10 @@ export default function FinalSections() {
 
           <div className="space-y-6 text-base md:text-lg text-center leading-relaxed">
             <div className="space-y-1">
-              <p className="text-xl md:text-2xl font-bold text-white uppercase tracking-tight">
+              <p className="text-lg md:text-xl font-bold text-white tracking-tight">
                 Chaque jour qui passe sans MAVA,
               </p>
-              <p className="text-xl md:text-2xl font-bold text-red-600 uppercase tracking-tight">
+              <p className="text-lg md:text-xl font-bold text-red-600 tracking-tight">
                 c’est continuer à vendre à ta capacité humaine, et pas à la capacité de ton marché.
               </p>
             </div>
@@ -66,6 +66,6 @@ export default function FinalSections() {
           </div>
         </div>
       </section>
-    </div>
+    </div> /* <--- LA FERMETURE MANQUANTE ÉTAIT ICI */
   );
 }
