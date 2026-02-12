@@ -41,7 +41,7 @@ export default function TargetAudienceSection() {
             </div>
             <ul className="space-y-2 ml-4 text-base text-gray-200">
               <li>• vendent déjà,</li>
-              <li>• veulent vendre mieux et plus,</li>
+              <li>• ont du volume, mais pas le sytème qui va avec,</li>
               <li>• reçoivent constamment des messages,</li>
               <li className="list-none -ml-4 pt-1">
                 et pour qui ces messages font perdre du temps, de l'énergie et des ventes.
