@@ -1,30 +1,67 @@
-import { Zap, MessageSquare, Bell, CheckCircle2 } from 'lucide-react';
+import PricingCard from './PricingCard';
 
-export default function SolutionSection() {
+export default function PricingSection() {
   return (
-    <section className="bg-red-950/20 p-6 rounded-3xl border border-red-900/50"> 
-      <div className="max-w-5xl mx-auto py-10">
-        <h2 className="text-3xl md:text-5xl font-black mb-10 text-center uppercase italic text-white">MAVA, CONCRÈTEMENT</h2>
+    <section className="red-section px-6 py-12 max-w-7xl mx-auto">
+      <div className="slide-up">
+        <h2 className="text-3xl md:text-5xl font-black mb-8 text-center uppercase">
+          CHOISIS TON MAVA
+        </h2>
         
-        <div className="grid md:grid-cols-2 gap-6 items-center">
-          <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
-            <p className="font-bold mb-6 text-xl uppercase text-white">Quand un client écrit :</p>
-            <ul className="grid grid-cols-1 gap-3 text-base text-white">
-              <li className="flex items-center gap-3 bg-black/20 p-2 rounded-lg"> <Zap size={18} /> Réponse instantanée </li>
-              <li className="flex items-center gap-3 bg-black/20 p-2 rounded-lg"> <MessageSquare size={18} /> Français naturel </li>
-              <li className="flex items-center gap-3 bg-black/20 p-2 rounded-lg"> <CheckCircle2 size={18} /> Infos prix/stocks </li>
-              <li className="flex items-center gap-3 bg-black/20 p-2 rounded-lg"> <Bell size={18} /> Alerte vente validée </li>
-            </ul>
-          </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          <PricingCard
+            title="MAVA CHAT"
+            badge="LE PLUS CHOISI"
+            description="Pour respirer et ne plus rater de vente."
+            features={[
+              'Réponses 24h/7j',
+              'Prises de commandes',
+              'Alertes dès qu’une vente est prête',
+              'Mise à jour des infos',
+              'Fonctionne naturellement avec ton téléphone actif, comme aujourd’hui'
+            ]}
+            bonus="Bonus : Dashboard simple pour suivre tes ventes"
+            price="29.000 F / mois"
+            originalPrice="45.000 F"
+            installTime="24–48h"
+            ctaText="Activer MAVA CHAT"
+            ctaMessage="Bonjour, je veux activer MAVA CHAT."
+          />
 
-          <div className="space-y-4 text-center">
-            <div className="bg-black border border-white/30 rounded-xl p-4 italic text-sm text-white">
-              <Bell className="inline mr-2 text-red-500" size={16} />
-              "Boss, commande validée pour Client 07XXXXXXX : 2 Montres Luxe."
-            </div>
-            <img src="/image.jpeg" alt="Dashboard" className="w-48 h-48 mx-auto object-contain" />
-            <p className="font-bold uppercase text-sm text-white">Il gère le courant. Tu gères l'important.</p>
-          </div>
+          <PricingCard
+            title="MAVA VISION"
+            badge="PRÉFÉRÉ PAR LES VENDEURS TIKTOK"
+            description="Pour les business qui vendent via lives TikTok/Facebook avec captures d’écran ou photos des produits"
+            features={[
+              'Tout MAVA CHAT +',
+              'Traitement intelligent des images',
+              'Reconnaissance des produits et preuves de paiement',
+              'Ajout et mise à jour des produits',
+              'Fonctionne naturellement avec ton téléphone actif, comme aujourd’hui'
+            ]}
+            price="35.000 F / mois"
+            originalPrice="50.000 F"
+            installTime="48–72h"
+            ctaText="Activer MAVA VISION"
+            ctaMessage="Bonjour, je veux activer MAVA VISION."
+          />
+
+          <PricingCard
+            title="MAVA PRO"
+            badge="SUR SÉLECTION"
+            description="Pour structures prêtes à devenir des systèmes."
+            features={[
+              'Configuration sur mesure',
+              'Multi-numéros / multi-canaux (sites web, réseaux sociaux, App)',
+              'Automatisations avancées',
+              'Support prioritaire',
+              'Entièrement autonome, même avec un smartphone hors circuit'
+            ]}
+            price="Sur devis"
+            installTime="Dès 125.000 F Inst. + 59.000 F/m"
+            ctaText="Demander évaluation"
+            ctaMessage="Bonjour, je souhaite une évaluation MAVA PRO."
+          />
         </div>
       </div>
     </section>
