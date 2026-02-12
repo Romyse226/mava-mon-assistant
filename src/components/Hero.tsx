@@ -28,7 +28,8 @@ export default function Hero() {
           PAS T'ENCHAÎNER À TON WHATSAPP.
         </h2>
 
-        <div className="mb-12 space-y-6 text-lg md:text-xl leading-relaxed slide-up">
+        {/* Espace réduit entre les deux blocs de texte ci-dessous (space-y-2 au lieu de 6) */}
+        <div className="mb-8 space-y-2 text-lg md:text-xl leading-relaxed slide-up">
           <p className="font-semibold text-xl md:text-2xl">
             MAVA EST TON ASSISTANT COMMERCIAL.
           </p>
@@ -39,12 +40,13 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="mb-12 space-y-4 text-lg md:text-xl font-medium slide-up">
+        {/* Espace réduit entre les lignes (space-y-1 au lieu de 4) et marge haute réduite (mb-8) */}
+        <div className="mb-8 space-y-1 text-lg md:text-xl font-medium slide-up">
           <p>24h/24.</p>
           <p>Sans fatigue.</p>
           <p>Sans stress.</p>
           <p>Sans que tu interviennes.</p>
-          <p className="text-gray-200">Et tu peux prendre la main quand tu veux.</p>
+          <p className="text-gray-200">Et tu peux intervenir quand tu veux.</p>
         </div>
 
         <div className="slide-up">
