@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function SocialProof() {
   const screenshots = [
@@ -8,22 +8,21 @@ export default function SocialProof() {
     "capture 4.jpeg",
     "capture 5.jpeg",
     "capture 6.jpeg",
-    "capture 7.jpeg"
   ];
 
   return (
-    <section className="dark-section px-4 py-24 w-full overflow-hidden">
+    <section className="dark-section px-4 py-12 w-full overflow-hidden"> {/* py-24 réduit à py-12 pour compresser le noir */}
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-black mb-16 text-center uppercase tracking-tighter">
+        <h2 className="text-4xl md:text-6xl font-black mb-10 text-center uppercase tracking-tighter leading-none">
           ILS ONT ACTIVÉ MAVA
         </h2>
 
-        {/* Le Slider avec barre de défilement réactivée et stylisée */}
-        <div className="flex gap-6 overflow-x-auto pb-6 snap-x items-start custom-scrollbar">
+        {/* Slider automatique calé sur 6 images */}
+        <div className="flex gap-6 overflow-x-auto pb-4 snap-x items-start custom-scrollbar">
           {screenshots.map((imgName, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-2xl p-1.5 shadow-2xl snap-center border border-white/5 flex flex-col h-auto"
+              className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-2xl p-1 shadow-2xl snap-center border border-white/5 flex flex-col h-auto"
             >
               {/* Étoiles discrètes */}
               <div className="flex items-center gap-1 mb-2 justify-center py-1">
@@ -32,7 +31,7 @@ export default function SocialProof() {
                 ))}
               </div>
 
-              {/* Cadre ultra-fin : p-0.5 pour que l'image respire */}
+              {/* Cadre ultra-fin pour laisser respirer l'image */}
               <div className="relative w-full rounded-xl overflow-hidden bg-gray-50 border border-gray-100">
                 <img 
                   src={`/${imgName}`} 
@@ -48,16 +47,22 @@ export default function SocialProof() {
           ))}
         </div>
 
-        {/* Ton texte Pulse */}
-        <p className="text-center text-gray-300 mt-8 text-sm font-medium tracking-widest uppercase animate-pulse">
-          ⬅ Faites glisser pour voir plus de témoignages ➡
-        </p>
+        {/* Navigation et Texte - Non animé et compressé */}
+        <div className="mt-8 flex flex-col items-center gap-4">
+          <div className="flex items-center gap-12 text-white animate-pulse">
+            <ChevronLeft size={32} strokeWidth={3} />
+            <ChevronRight size={32} strokeWidth={3} />
+          </div>
+          
+          <p className="text-center text-gray-300 text-sm font-medium tracking-widest uppercase max-w-md">
+            Les business organisés dominent. Les autres répondent.
+          </p>
+        </div>
       </div>
 
-      {/* CSS pour styliser la barre sans faire planter le code */}
       <style dangerouslySetInnerHTML={{ __html: `
         .custom-scrollbar::-webkit-scrollbar {
-          height: 6px;
+          height: 4px;
           display: block;
         }
         .custom-scrollbar::-webkit-scrollbar-track {

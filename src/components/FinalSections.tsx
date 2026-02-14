@@ -9,7 +9,7 @@ export default function FinalSections() {
         <div className="slide-up bg-red-950/20 rounded-3xl p-6 md:p-8 border border-red-900/50 shadow-xl">
           <div className="flex items-center justify-center gap-4 mb-6 text-red-600">
             <AlertTriangle size={32} />
-            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter">
               CAPACITÉ LIMITÉE
             </h2>
           </div>
@@ -33,7 +33,7 @@ export default function FinalSections() {
         <div className="slide-up bg-red-950/20 rounded-3xl p-6 md:p-8 border border-red-900/50 shadow-xl">
           <div className="flex items-center justify-center gap-4 mb-6 text-red-600">
             <Clock size={32} />
-            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter">
               DERNIER POINT
             </h2>
           </div>

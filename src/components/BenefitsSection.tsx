@@ -4,7 +4,7 @@ export default function BenefitsSection() {
   return (
     <section className="bg-red-950/40 p-4 md:p-8 rounded-3xl border border-red-900/50">
       <div className="slide-up">
-        <h2 className="text-3xl md:text-5xl font-black mb-8 text-center uppercase tracking-tighter">
+        <h2 className="text-4xl md:text-5xl font-black mb-8 text-center uppercase tracking-tighter">
           CE QUE TU GAGNES <br className="md:hidden" /> AVEC MAVA
         </h2>
 

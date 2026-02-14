@@ -5,16 +5,16 @@ export default function TargetAudienceSection() {
     <section className="bg-red-950/40 p-4 md:p-8 rounded-3xl border border-red-900/50 max-w-5xl mx-auto">
       <div className="slide-up">
         {/* Titre avec cassure forcée mobile */}
-        <h2 className="text-3xl md:text-5xl font-black mb-6 text-center uppercase tracking-tighter leading-tight text-white">
+        <h2 className="text-4xl md:text-5xl font-black mb-6 text-center uppercase tracking-tighter leading-tight text-white">
           À QUI MAVA <br className="md:hidden" /> EST DESTINÉ ?
         </h2>
 
         {/* Sous-titre : Rouge avec Brillance (Shadow Glow) */}
         <div className="space-y-1 text-center mb-8">
-          <p className="text-base text-red-500 font-bold uppercase italic drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
+          <p className="text-base text-white-500 font-bold uppercase italic drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
             Soyons clairs.
           </p>
-          <p className="text-base text-red-500 font-bold uppercase italic drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
+          <p className="text-base text-white-500 font-bold uppercase italic drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
             MAVA n'est pas pour tout le monde.
           </p>
         </div>

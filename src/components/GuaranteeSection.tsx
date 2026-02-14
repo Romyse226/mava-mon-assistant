@@ -6,7 +6,7 @@ export default function GuaranteeSection() {
       <div className="slide-up bg-white rounded-3xl p-6 md:p-8 text-[#700E03] shadow-2xl">
         <div className="flex items-center justify-center gap-4 mb-6">
           <Shield size={40} strokeWidth={2.5} className="flex-shrink-0" />
-          <h2 className="text-2xl md:text-4xl font-black uppercase leading-none">
+          <h2 className="text-3xl md:text-4xl font-black uppercase leading-none">
             GARANTIE RÉSULTATS
           </h2>
         </div>
